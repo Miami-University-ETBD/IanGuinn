@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0088ff; /* Light cornflower blue background */
-    color: #ffffff; /* Navy blue text */
+    background-color: #ff98ff; /* Light cornflower blue background */
+    color: #000000; /* Navy blue text */
  }
  
  
@@ -16,8 +16,8 @@ body {
  
  /* Header */
  header {
-    background-color: #6495ed; /* Cornflower blue */
-    color: white;
+    background-color: #69ffd5; /* Cornflower blue */
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 1em;
     font-size: 2em;
@@ -26,7 +26,7 @@ body {
  
  /* Sub-Headers (H2) */
  h2 {
-    color: #00f7ff; /* Pink */
+    color: #009ba0; /* Pink */
     margin-top: 1em;
  }
  
@@ -81,7 +81,7 @@ body {
  /* Footer */
  footer {
     background-color: #69ffd5; /* Pink */
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 1em 0;
     width: 100%;
@@ -105,7 +105,7 @@ body {
  
  th {
     background-color: #6495ed; /* Cornflower blue */
-    color: white;
+    color: rgb(0, 0, 0);
  }
  
  
