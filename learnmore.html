@@ -13,6 +13,10 @@
        <h1>Dungeons and Dragons</h1>
    </header>
 
+   <div class="navbar">
+        <a href="index.html">Main Page</a>
+        <a href="aboutme.html">About Me</a>
+   </div>
 
    <!-- Main container with Flexbox layout -->
    <div class="container">
@@ -24,8 +28,8 @@
            <section>
                <h2>About D&D</h2>
                <p><strong>1974</strong> In the year 1974 Dungeons and Dragons was created by Gary Gygax, this creation would change the nerd community forever. </p>
-               <p>Dungeons and Dragons is a table top role playing game, TTRPG, about high fantasy settings with elves and dwarves adventuring fighting demons and saving the world.</p>
-
+               <p>Dungeons and Dragons (<a href="https://www.dndbeyond.com/">D&D</a>) is a table top role playing game, TTRPG, about high fantasy settings with elves and dwarves adventuring fighting demons and saving the world.</p>
+                <img src="images/DnD-Symbol.png" alt="dnd logo" width="640" height="480">
 
                <h2>My Favorite Settings</h2>
                <p>Out of all the Dungeons and Dragons, settings these have got to be my favorite:</p>
@@ -35,6 +39,17 @@
                    <li>Curse of Strahd</li>
                </ul>
 
+               <h3>Enter your favorite part of the website so I can know your inputs.</h3>
+               <br>
+               <input id="userInput"> <br><br>
+               <button onclick="myFunction()">Submit</button>
+               <p id="message"></p>
+               <script>function myFunction() {
+               let userInput = document.querySelector ("#userInput");
+               let message = document.querySelector ("#message");
+               message.innerHTML = "Thank your for your feedback ";
+               }
+               </script>
 
                <h2>Basis of Dungeons and Dragons</h2>
                <table>
@@ -60,6 +75,9 @@
                    </tr>
                </table>
            </section>
+
+ 
+            
 
 
            <!-- Aside for additional information -->
