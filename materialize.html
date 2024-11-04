@@ -5,7 +5,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>One Piece</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
    <style>
        .header-bg {
            background-color: #f8bbd0; /* Light pink background */
@@ -106,6 +105,20 @@
    </div>
    <div class="row">
 
+    <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons"></i>Characters</div>
+          <div class="collapsible-body"><span>Oda</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons"></i>Places</div>
+          <div class="collapsible-body"><span>Red Line, Grand Line and New World</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons"></i>Lore</div>
+          <div class="collapsible-body"><span>Gol D. Roger</span></div>
+        </li>
+      </ul>
 
        <div class="col s4">
            <img src="luffy.jpg" alt="Luffy" class="circular responsive-img">
@@ -120,6 +133,12 @@
            <blockquote>Kidd</blockquote>
        </div>
       </div>
+
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="https://en.wikipedia.org/wiki/One_Piece"></a>
+        <a class="carousel-item" href="#two!"><img src="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?srsltid=AfmBOoqrml2vz7NnQrxWnjvbVJvjpdB9tCG3Yd0myk7-qxSJT0_NMMRO"></a>
+      </div>
+
    <!-- Contact Section -->
    <div id="contact" class="section section-bg">
        <div class="container">
@@ -151,6 +170,75 @@
            </div>
        </div>
    </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+   <script>
+    // Initialize modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+
+
+    // Function to display selected pastry
+    function displayPastry() {
+        const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+        document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+    }
+    // Function to handle email subscription form submission
+    function submitEmail(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+        document.getElementById('email').value = ''; // Clear the input
+
+
+        // Display modal
+        const modalText = document.getElementById('modal-content-text');
+        modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+        const modal = M.Modal.getInstance(document.getElementById('modal1'));
+        modal.open();
+    }
+</script>
+
+<div id="radio-section" class="section container">
+    <h2>Select Your Character</h2>
+    <form>
+        <p>
+            <label>
+                <input name="character" type="radio" value="Luffy" onclick="displayPastry()"/>
+                <span>Luffy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="character" type="radio" value="Law" onclick="displayPastry()"/>
+                <span>Law</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="character" type="radio" value="Kidd" onclick="displayPastry()"/>
+                <span>Kidd</span>
+            </label>
+        </p>
+    </form>
+    <div id="pastry-response"></div>
+</div>
+
+<!-- Email Feedback Section -->
+<div id="feedback-section" class="section container">
+    <h2>Subscribe for Updates</h2>
+    <form onsubmit="submitEmail(event)">
+        <div class="input-field">
+            <input id="email" type="email" required>
+            <label for="email">Email</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+    </form>
+    <div id="email-response"></div>
+</div>
 
 
    <!-- Footer -->
