@@ -178,3 +178,148 @@ body {
     margin-left: 1em;
  }
  
+
+ .row {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+    flex-direction: row;
+    margin-left: -0.3rem;
+}
+
+.quarter {
+    position: relative; 
+	flex: 25%;
+	max-width: 23%;
+	margin: 0.5% 1% 0.5% 0;
+}
+
+.half {
+	flex: 50%;
+	max-width: 45%;
+	padding: 2.5% 5% 2.5% 0;
+}
+.one-third {
+	flex: 33.33%;
+	max-width: 28.33%;
+	padding: 2.5% 5% 2.5% 0;
+}
+
+.two-thirds {
+	flex: 66.66%;
+	max-width: 61.66%;
+	padding: 2.5% 5% 2.5% 0;
+}
+
+@media (max-width: 1060px) {
+	.half, .one-third, .two-thirds {
+		flex: 100%; 
+		max-width: 100% !important;
+        padding: 0.5rem;
+	}
+    
+    .quarter {
+        flex: 50%;
+        max-width: 45%;
+        padding: 2.5% 5% 2.5% 0;
+    }
+    
+    .row {
+        margin-left: 0rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .quarter {
+        flex: 100%; 
+		max-width: 100% !important;
+    }
+}
+
+
+.image-card-container {
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  
+  .image-card {
+      position: relative;
+    flex: 88%;
+    max-width: 88%;
+    min-width: 0;
+    padding: 1rem 0rem;
+    margin: 0% 9% 0% 3%;
+  }
+  
+  @media (min-width: 1060px) {
+  .image-card {
+      flex: 38%;
+      max-width: 38%;
+      margin: 0% 6% 0% 3%;
+      padding-bottom: 40px;
+  }
+    
+    .image-card:first-child {
+      margin-right: 7%;
+    }
+  }
+  
+  .image-card img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      max-width: 100% !important;
+  }
+  
+  @media screen and (min-width: 425px) {
+    .image-card img {
+        height: 250px;
+    }
+  }
+    
+    @media screen and (min-width: 1060px) {
+    .image-card img {
+        height: 313px;
+  }
+  }
+  
+  .image-card-caption {
+      background-color: #faf9f7;
+      width: 88%;
+      position: relative;
+      top: -25px;
+      left: calc(5% + 1px);
+      border-bottom: 5px solid #edece2;
+      padding: 2rem 2.2rem;
+  }
+  
+  .image-card-caption h3 {
+      font-weight: 700;
+      padding-top: 0rem;
+      margin-top: 0rem;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+  }
+  
+    @media screen and (min-width: 1060px) {
+      .image-card-caption h3 {
+          padding-top: 0;
+          margin-top: 0.5rem;
+      }
+      
+  }
+  
+    .image-card-caption {
+        width: 85%;
+        top: -60px;
+    }
+
+
