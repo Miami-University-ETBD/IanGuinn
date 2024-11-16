@@ -7,38 +7,56 @@
 </head>
 
 <script>
-    $("#hide").click(function(){
+$(document).ready(function(){
+$("#hide").click(function(){
   $("p").hide();
 });
 
 $("#show").click(function(){
   $("p").show();
 });
+});
 </script>
 
 <script>
+    $(document).ready(function(){
     $("button").click(function(){
   $("#div1").fadeIn();
   $("#div2").fadeIn("slow");
   $("#div3").fadeIn(3000);
 });
+});
 </script>
 
 <script>
+    $(document).ready(function(){
     $("button").click(function(){
   $("div").animate({
     height: 'toggle'
   });
 }); 
+});
 </script>
 
+<script>
+    $(document).ready(function(){
+    $("#hide").click(function(){
+      $("img").hide();
+    });
+    
+    $("#show").click(function(){
+      $("img").show();
+    });
+    });
+    </script>
+
 <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delicious Bakery</title>
+<title>League of Legends: Arcane</title>
 </head>
 <body>
 <!-- Header of the website -->
 <header>
-   <h1>Welcome to Delicious Bakery</h1>
+   <h1>Welcome to Runeterra</h1>
   
    <div class="navbar">
        <a href="index.html">Home</a>
@@ -47,7 +65,11 @@ $("#show").click(function(){
        <a href="materialize.html">One Piece</a>
    </div>
 
-
+   <p>The series Arcane is about the two cities, Piltover and Zaun, as they fight each other for dominance and peace. They both see each other as a existing problem and neither can stop the blodd shed.</p>
+   <img src="images/runeterra.jpg" alt="Runeterra" width="400" 
+   height="500">
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
 </header>
 <body>
 </body>
